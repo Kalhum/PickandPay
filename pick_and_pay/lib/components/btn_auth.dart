@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class BtnAute extends StatelessWidget {
+class BtnAuth extends StatelessWidget {
   Function()? onTap;
   final String imageAsset;
-  BtnAute({super.key, required this.imageAsset , required this.onTap});
+  BtnAuth({super.key, required this.imageAsset , required this.onTap});
 
   @override
   Widget build(BuildContext context) {
