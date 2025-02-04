@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pick_and_pay/login_screen.dart';
+import 'package:pick_and_pay/splash_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,6 +11,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: Login_screen());
+    return const MaterialApp(home: Splash_screen());
   }
 }

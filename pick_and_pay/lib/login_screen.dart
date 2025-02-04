@@ -27,6 +27,22 @@ class _Login_screenState extends State<Login_screen> {
         child: Column(
           children: [
             Container(
+              height: 38,
+              child: Row(
+                children: [
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: Icon(
+                        Icons.arrow_back,
+                        size: 35,
+                        color: Colors.white,
+                      ))
+                ],
+              ),
+            ),
+            Container(
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
               child: Text(
@@ -38,7 +54,7 @@ class _Login_screenState extends State<Login_screen> {
               ),
             ),
             Container(
-              height: 636,
+              height: 598,
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
                   color: Colors.white,
@@ -105,11 +121,9 @@ class _Login_screenState extends State<Login_screen> {
                         width: 10,
                       ),
 
-
                       // btn login components
                       BtnLoginandregis(
                           onTap: onTapBtnReLog, textBtn: "สมัครสมาชิก")
-
                     ],
                   ),
                   Row(
