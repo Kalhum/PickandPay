@@ -34,7 +34,11 @@ class _Splash_screenState extends State<Splash_screen> {
                 size: 250,
                 color: Colors.purple,
               ),
-              MyTexts(text: "Pick&PayShop"),
+              MyTexts(
+                text: "Pick&PayShop",
+                fontSize: 30,
+                textColor: Colors.black,
+              ),
               SizedBox(
                 height: 30,
               ),
