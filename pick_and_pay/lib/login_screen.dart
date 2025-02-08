@@ -2,21 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:pick_and_pay/components/btn_auth.dart';
 import 'package:pick_and_pay/components/btn_loginandregis.dart';
 import 'package:pick_and_pay/components/my_textfield.dart';
+import 'package:pick_and_pay/home_screen.dart';
 import 'package:pick_and_pay/register_screen.dart';
 
-class Login_screen extends StatefulWidget {
-  const Login_screen({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   @override
-  State<Login_screen> createState() => _Login_screenState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _Login_screenState extends State<Login_screen> {
+class _LoginScreenState extends State<LoginScreen> {
   // function ontap button register and login components
 
   void onTapBtnReLog() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => Register_sreen()));
+        context, MaterialPageRoute(builder: (context) => RegisterScreen()));
   }
 
   @override
@@ -97,7 +98,12 @@ class _Login_screenState extends State<Login_screen> {
                             backgroundColor: Colors.purple,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15))),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomeScreen()));
+                        },
                         child: Text(
                           "เข้าสู่ระบบ",
                           style: TextStyle(

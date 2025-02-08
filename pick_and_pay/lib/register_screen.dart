@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:pick_and_pay/components/btn_auth.dart';
 import 'package:pick_and_pay/components/my_textfield.dart';
 
-class Register_sreen extends StatefulWidget {
-  const Register_sreen({super.key});
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
 
   @override
-  State<Register_sreen> createState() => _Register_sreenState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _Register_sreenState extends State<Register_sreen> {
+class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

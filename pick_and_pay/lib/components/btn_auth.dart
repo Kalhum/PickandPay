@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BtnAuth extends StatelessWidget {
-  Function()? onTap;
+  final Function()? onTap;
   final String imageAsset;
   BtnAuth({super.key, required this.imageAsset , required this.onTap});
 
