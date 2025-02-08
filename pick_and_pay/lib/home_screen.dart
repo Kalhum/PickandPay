@@ -272,7 +272,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 98,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
-                      color: Color.fromRGBO(255, 222, 89, 10)),
+                      color: Color.fromRGBO(255, 222, 89, 1)),
                   child: IconButton(
                       onPressed: () {},
                       icon: Icon(
