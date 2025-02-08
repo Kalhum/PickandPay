@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyButtons extends StatelessWidget {
-  Function()? onPressed ;
+  final Function()? onPressed ;
   final String textBtn;
   MyButtons({super.key , required this.onPressed ,required this.textBtn});
 

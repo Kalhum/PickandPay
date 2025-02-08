@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class BtnNavmenu extends StatelessWidget {
+class BtnNavMenu extends StatelessWidget {
   final String textBtn;
   final IconData iconBtn;
-  void Function()? onPressed ;
-  BtnNavmenu({super.key, required this.textBtn, required this.iconBtn, required this.onPressed});
+  final void Function()? onPressed ;
+  BtnNavMenu({super.key, required this.textBtn, required this.iconBtn, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

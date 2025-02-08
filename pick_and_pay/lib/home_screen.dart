@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:pick_and_pay/components/btn_NavMenu.dart';
+import 'package:pick_and_pay/components/btn_nav_menu.dart';
 import 'package:pick_and_pay/components/my_texts.dart';
 import 'package:pick_and_pay/components/product_box.dart';
-import 'package:pick_and_pay/login_screen.dart';
 
-class Home_screen extends StatefulWidget {
-  const Home_screen({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<Home_screen> createState() => _Home_screenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _Home_screenState extends State<Home_screen> {
+class _HomeScreenState extends State<HomeScreen> {
   // function go to Home page
 
   void homePage() {
@@ -41,9 +40,7 @@ class _Home_screenState extends State<Home_screen> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(50)),
                       child: IconButton(
-                        onPressed: () {
-                          print("proflie");
-                        },
+                        onPressed: () {},
                         icon: Icon(
                           Icons.person,
                           size: 60,
@@ -83,9 +80,7 @@ class _Home_screenState extends State<Home_screen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       GestureDetector(
-                        onTap: () {
-                          print("setting");
-                        },
+                        onTap: () {},
                         child: Container(
                           padding:
                               EdgeInsets.symmetric(vertical: 7, horizontal: 15),
@@ -240,12 +235,12 @@ class _Home_screenState extends State<Home_screen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      BtnNavmenu(
+                      BtnNavMenu(
                         textBtn: 'หน้าแรก',
                         iconBtn: Icons.home,
                         onPressed: homePage,
                       ),
-                      BtnNavmenu(
+                      BtnNavMenu(
                         textBtn: 'ของรางวัล',
                         iconBtn: Icons.card_giftcard,
                         onPressed: () {},
@@ -253,12 +248,12 @@ class _Home_screenState extends State<Home_screen> {
                       SizedBox(
                         width: 100,
                       ),
-                      BtnNavmenu(
+                      BtnNavMenu(
                         textBtn: 'โปรโมชั่น',
                         iconBtn: Icons.list,
                         onPressed: () {},
                       ),
-                      BtnNavmenu(
+                      BtnNavMenu(
                         textBtn: 'ประวัติ',
                         iconBtn: Icons.history,
                         onPressed: () {},
@@ -279,9 +274,7 @@ class _Home_screenState extends State<Home_screen> {
                       borderRadius: BorderRadius.circular(50),
                       color: Color.fromRGBO(255, 222, 89, 10)),
                   child: IconButton(
-                      onPressed: () {
-                        print("qr_cpode btn");
-                      },
+                      onPressed: () {},
                       icon: Icon(
                         Icons.qr_code,
                         size: 60,

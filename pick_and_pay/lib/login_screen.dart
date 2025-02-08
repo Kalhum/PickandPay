@@ -5,19 +5,19 @@ import 'package:pick_and_pay/components/my_textfield.dart';
 import 'package:pick_and_pay/home_screen.dart';
 import 'package:pick_and_pay/register_screen.dart';
 
-class Login_screen extends StatefulWidget {
-  const Login_screen({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   @override
-  State<Login_screen> createState() => _Login_screenState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _Login_screenState extends State<Login_screen> {
+class _LoginScreenState extends State<LoginScreen> {
   // function ontap button register and login components
 
   void onTapBtnReLog() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => Register_sreen()));
+        context, MaterialPageRoute(builder: (context) => RegisterScreen()));
   }
 
   @override
@@ -102,7 +102,7 @@ class _Login_screenState extends State<Login_screen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Home_screen()));
+                                  builder: (context) => HomeScreen()));
                         },
                         child: Text(
                           "เข้าสู่ระบบ",

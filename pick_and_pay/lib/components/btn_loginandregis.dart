@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BtnLoginandregis extends StatelessWidget {
-  Function()? onTap;
+  final Function()? onTap;
   final String textBtn;
   BtnLoginandregis({super.key, required this.onTap, required this.textBtn});
 
