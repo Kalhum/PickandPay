@@ -15,7 +15,27 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void homePage() {
     Navigator.pop(context);
+    // BtnType.save;
+    // btn_receive(BtnType.save);
+
+    // Constants.SUCCESS_MESSAGE;
   }
+
+  // Widget btn_receive(BtnType type) {
+  //   if (type == BtnType.save) {
+  //     // do something
+  //     return TextField(
+  //       decoration: InputDecoration(labelText: "username"),
+  //     );
+  //   }
+  //   return Container(
+  //     width: 100,
+  //     height: 100,
+  //     decoration: BoxDecoration(
+  //       color: Colors.orange,
+  //     ),
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -132,6 +152,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: SingleChildScrollView(
                         child: Column(
                           children: [
+                            // btn_receive(BtnType.save),
+                            // btn_receive(BtnType.delete),
                             Row(
                               children: [
                                 MyTexts(
@@ -284,7 +306,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
 
               // end qr_code btn
-            ])
+            ]),
           ],
         ),
       ),

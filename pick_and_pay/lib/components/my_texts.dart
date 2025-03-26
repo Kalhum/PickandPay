@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pick_and_pay/components/eum_btn.dart';
 
 class MyTexts extends StatelessWidget {
   final String text;
@@ -13,6 +14,7 @@ class MyTexts extends StatelessWidget {
     return Center(
       child: Text(
         text,
+        // style: Constants.title,
         style: TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold,color: textColor),
       ),
     );
