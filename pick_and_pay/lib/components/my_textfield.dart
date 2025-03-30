@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class MyTextField extends StatelessWidget {
   final String labelText;
-  final controllor;
-  MyTextField({super.key, required this.labelText, this.controllor});
+  final controller;
+  MyTextField({super.key, required this.labelText, this.controller});
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      controller: controllor,
+      controller: controller,
       decoration: InputDecoration(
           labelText: labelText,
           focusedBorder: OutlineInputBorder(
