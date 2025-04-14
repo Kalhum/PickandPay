@@ -21,6 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
     // Constants.SUCCESS_MESSAGE;
   }
 
+
   // Widget btn_receive(BtnType type) {
   //   if (type == BtnType.save) {
   //     // do something
@@ -100,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       GestureDetector(
-                        onTap: () {},
+                        onTap: (){},
                         child: Container(
                           padding:
                               EdgeInsets.symmetric(vertical: 7, horizontal: 15),
@@ -148,7 +149,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 15,
                     ),
                     SizedBox(
-                      height: 458,
+                      height: 559,
                       child: SingleChildScrollView(
                         child: Column(
                           children: [
@@ -287,7 +288,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
               // btn  qr_code
               Positioned(
-                left: 151.5,
+                left: 175,
                 bottom: 10,
                 child: Container(
                   width: 98,
@@ -304,7 +305,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       )),
                 ),
               ),
-
               // end qr_code btn
             ]),
           ],
