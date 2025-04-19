@@ -21,7 +21,6 @@ class _HomeScreenState extends State<HomeScreen> {
     // Constants.SUCCESS_MESSAGE;
   }
 
-
   // Widget btn_receive(BtnType type) {
   //   if (type == BtnType.save) {
   //     // do something
@@ -101,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       GestureDetector(
-                        onTap: (){},
+                        onTap: () {},
                         child: Container(
                           padding:
                               EdgeInsets.symmetric(vertical: 7, horizontal: 15),
@@ -269,7 +268,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         onPressed: () {},
                       ),
                       SizedBox(
-                        width: 100,
+                        width: 40,
                       ),
                       BtnNavMenu(
                         textBtn: 'โปรโมชั่น',
@@ -289,7 +288,7 @@ class _HomeScreenState extends State<HomeScreen> {
               // btn  qr_code
               Positioned(
                 left: 175,
-                bottom: 10,
+                bottom: 20,
                 child: Container(
                   width: 98,
                   height: 98,

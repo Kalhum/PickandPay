@@ -8,7 +8,9 @@ class Constants {
   static const Color bgColor = Colors.red;
   static const TextStyle title =
       TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white);
-  static const TextStyle textBody =
+  static const TextStyle textBodywhite =
       TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white);
+  static const TextStyle textBodyBlack =
+      TextStyle(fontSize: 20, color: Color.fromARGB(255, 0, 0, 0));
   static const Widget text = Text("Welcome");
 }

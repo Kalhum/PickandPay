@@ -17,7 +17,7 @@ class MyTexts extends StatelessWidget {
     return Center(
       child: Text(
         text,
-        style: Constants.title,
+        style: Constants.textBodyBlack,
       ),
     );
   }
