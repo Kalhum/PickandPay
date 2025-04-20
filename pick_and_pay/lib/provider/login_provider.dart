@@ -2,14 +2,16 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:pick_and_pay/config/appconfig.dart';
 import 'package:pick_and_pay/register_screen.dart';
+
 
 class LoginProvider {
   TextEditingController username = TextEditingController();
   TextEditingController password = TextEditingController();
 
   void LoginProviderFunction(BuildContext context) async {
-    var response = await http.post(Uri.http('localhost:2000', '/loginApi'),
+    var response = await http.post(Uri.http(AppConfig.baseUrl, '/loginApi'),
         body: {'username': username.text, 'password': password.text});
     print(response);
 
@@ -58,7 +60,7 @@ class LoginProvider {
               onPressed: () {
                 Navigator.of(context).pop(); // ปิดป๊ อปอัพ
               },
-              child: Text('ตก'),
+              child: Text('ตกลง'),
             ),
           ],
         );

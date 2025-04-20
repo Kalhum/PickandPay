@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:pick_and_pay/config/appconfig.dart';
 import 'package:pick_and_pay/login_screen.dart';
 
 class RegisterProvider {
@@ -10,7 +11,7 @@ class RegisterProvider {
   TextEditingController email = TextEditingController();
 
   void registerFunction(context) async {
-    var response = await http.post(Uri.http('localhost:2000', 'registerApi'),
+    var response = await http.post(Uri.http(AppConfig.baseUrl, 'registerApi'),
         body: {
           'username': username.text,
           'password': password.text,

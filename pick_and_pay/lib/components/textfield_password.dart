@@ -12,20 +12,20 @@ class TextfieldPassword extends StatefulWidget {
 }
 
 class _TextfieldPasswordState extends State<TextfieldPassword> {
-    bool openPassword = false;
+    bool closePassword = false;
   @override
   Widget build(BuildContext context) {
     return TextField(
-      obscureText: !openPassword,
+      obscureText: !closePassword,
       controller: widget.controller,
       decoration: InputDecoration(
           suffixIcon: IconButton(
               onPressed: () {
                 setState(() {
-                  openPassword = !openPassword;
+                  closePassword = !closePassword;
                 });
               },
-              icon: Icon(openPassword ? Icons.visibility : Icons.visibility_off)),
+              icon: Icon(closePassword ? Icons.visibility : Icons.visibility_off)),
           labelText: "Password",
           focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(
