@@ -11,10 +11,14 @@ class LoginProvider {
   TextEditingController password = TextEditingController();
 
   void LoginProviderFunction(BuildContext context) async {
-    var response = await http.post(Uri.http(AppConfig.baseUrl, '/loginApi'),
-        body: {'username': username.text, 'password': password.text});
+    // var response = await http.post(Uri.http(AppConfig.baseUrl, '/loginApi'),
+    //     body: {'username': username.text, 'password': password.text});
+    var response = await NetworkConfig().postApi('/loginApi',
+        {'username': username.text, 'password': password.text});
+
     print(response);
 
+    
     var decodeReponse = jsonDecode(utf8.decode(response.bodyBytes));
     print(decodeReponse);
 

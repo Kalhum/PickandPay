@@ -12,11 +12,11 @@ class TextfieldPassword extends StatefulWidget {
 }
 
 class _TextfieldPasswordState extends State<TextfieldPassword> {
-    bool closePassword = false;
+    bool closePassword = true;
   @override
   Widget build(BuildContext context) {
     return TextField(
-      obscureText: !closePassword,
+      obscureText: closePassword,
       controller: widget.controller,
       decoration: InputDecoration(
           suffixIcon: IconButton(

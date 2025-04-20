@@ -11,12 +11,12 @@ class RegisterProvider {
   TextEditingController email = TextEditingController();
 
   void registerFunction(context) async {
-    var response = await http.post(Uri.http(AppConfig.baseUrl, 'registerApi'),
-        body: {
-          'username': username.text,
-          'password': password.text,
-          'email': email.text
-        });
+ 
+  var response = await NetworkConfig().postApi('/registerApi', {
+      'username': username.text,
+      'password': password.text,
+      'email': email.text
+    });
     var decodeReponse = jsonDecode(utf8.decode(response.bodyBytes));
     print(decodeReponse);
 
