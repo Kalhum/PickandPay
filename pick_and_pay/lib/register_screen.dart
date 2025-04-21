@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pick_and_pay/components/btn_auth.dart';
 import 'package:pick_and_pay/components/my_textfield.dart';
+import 'package:pick_and_pay/components/textfield_password.dart';
+import 'package:pick_and_pay/provider/register_provider.dart';
 
 class Register_sreen extends StatefulWidget {
   const Register_sreen({super.key});
@@ -10,6 +12,7 @@ class Register_sreen extends StatefulWidget {
 }
 
 class _Register_sreenState extends State<Register_sreen> {
+  RegisterProvider registerProvider = RegisterProvider();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,87 +47,97 @@ class _Register_sreenState extends State<Register_sreen> {
                     fontWeight: FontWeight.bold),
               ),
             ),
-            Container(
-              height: 618,
-              padding: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.vertical(
-                    top: Radius.circular(15),
-                  )),
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 30,
-                  ),
-                  MyTextField(
-                    labelText: 'Username',
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  MyTextField(labelText: "Password"),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  MyTextField(labelText: "Email"),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  SizedBox(
-                    width: double.infinity,
-                    height: 50,
-                    child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.purple,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15))),
-                        onPressed: () {},
-                        child: Text(
-                          "สมัครสมาชิก",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold),
-                        )),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Divider(
-                          color: Colors.grey[300],
-                          thickness: 2,
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(15),
+                    )),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 30,
+                    ),
+                    MyTextField(
+                      labelText: 'Username',
+                      controller: registerProvider.username,
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    TextfieldPassword(
+                      controller: registerProvider.password,
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    MyTextField(
+                      labelText: "Email",
+                      controller: registerProvider.email,
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    SizedBox(
+                      width: double.infinity,
+                      height: 50,
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.purple,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15))),
+                          onPressed: () {
+                            registerProvider.registerFunction(context);
+                          },
+                          child: Text(
+                            "สมัครสมาชิก",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          )),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Divider(
+                            color: Colors.grey[300],
+                            thickness: 2,
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          "หรือสมัครสมาชิกด้วย",
-                          style: TextStyle(
-                              color: Colors.grey, fontWeight: FontWeight.bold),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "หรือสมัครสมาชิกด้วย",
+                            style: TextStyle(
+                                color: Colors.grey,
+                                fontWeight: FontWeight.bold),
+                          ),
                         ),
-                      ),
-                      Expanded(
-                        child: Divider(
-                          color: Colors.grey[300],
-                          thickness: 2,
+                        Expanded(
+                          child: Divider(
+                            color: Colors.grey[300],
+                            thickness: 2,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  BtnAuth(
-                    imageAsset: "assets/images/Google_Logo.png",
-                    onTap: () {
-                      print("aute btn");
-                    },
-                  )
-                ],
+                      ],
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    BtnAuth(
+                      imageAsset: "assets/images/Google_Logo.png",
+                      onTap: () {
+                        print("aute btn");
+                      },
+                    )
+                  ],
+                ),
               ),
             )
           ],
