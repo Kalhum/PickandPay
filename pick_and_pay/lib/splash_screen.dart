@@ -3,17 +3,17 @@ import 'package:pick_and_pay/components/my_buttons.dart';
 import 'package:pick_and_pay/components/my_texts.dart';
 import 'package:pick_and_pay/login_screen.dart';
 
-class Splash_screen extends StatefulWidget {
-  const Splash_screen({super.key});
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State<Splash_screen> createState() => _Splash_screenState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _Splash_screenState extends State<Splash_screen> {
+class _SplashScreenState extends State<SplashScreen> {
   void functionMybtn() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => Login_screen()));
+        context, MaterialPageRoute(builder: (context) => LoginScreen()));
   }
 
   @override
@@ -34,7 +34,11 @@ class _Splash_screenState extends State<Splash_screen> {
                 size: 250,
                 color: Colors.purple,
               ),
-              MyTexts(text: "Pick&PayShop"),
+              MyTexts(
+                text: "Pick&PayShop",
+                fontSize: 30,
+                textColor: Colors.black,
+              ),
               SizedBox(
                 height: 30,
               ),
