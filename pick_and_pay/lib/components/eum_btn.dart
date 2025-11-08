@@ -5,12 +5,20 @@ enum BtnType { save, delete, submit }
 class Constants {
   static const String SUCCESS_MESSAGE =
       "You will be contacted by us very soon.";
+
   static const Color bgColor = Colors.red;
+
   static const TextStyle title =
       TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white);
+
   static const TextStyle textBodywhite =
-      TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white);
+      TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white);
+
   static const TextStyle textBodyBlack =
-      TextStyle(fontSize: 20, color: Color.fromARGB(255, 0, 0, 0));
+      TextStyle(fontSize: 15, color: Color.fromARGB(255, 0, 0, 0));
+
   static const Widget text = Text("Welcome");
+
+  static const TextStyle textTitleBlack =
+      TextStyle(fontSize: 20, color: Color.fromARGB(255, 0, 0, 0));
 }

@@ -14,6 +14,8 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   // function ontap button register and login components
+  TextEditingController usernameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
   void onTapBtnReLog() {
     Navigator.push(
@@ -73,11 +75,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     MyTextField(
                       labelText: 'Username',
+                      controllor: usernameController
                     ),
                     SizedBox(
                       height: 15,
                     ),
-                    MyTextField(labelText: "Password"),
+                    MyTextField(
+                      labelText: "Password",
+                      controllor: passwordController),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [

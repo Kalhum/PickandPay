@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pick_and_pay/components/eum_btn.dart';
 import 'package:pick_and_pay/components/my_buttons.dart';
 import 'package:pick_and_pay/components/my_texts.dart';
 import 'package:pick_and_pay/login_screen.dart';
@@ -35,9 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 color: Colors.purple,
               ),
               MyTexts(
-                text: "Pick&PayShop",
-                fontSize: 30,
-                textColor: Colors.black,
+                text: "Pick&PayShop", style: Constants.textBodyBlack,
               ),
               SizedBox(
                 height: 30,
